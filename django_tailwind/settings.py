@@ -27,11 +27,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 SESSION_COOKIE_AGE = 60 * 60 * 24  # 24 hours
 CART_SESSION_ID = 'cart'
+
+STRIPE_API_KEY_PUBLISHABLE = ''
+STRIPE_API_KEY_HIDDEN = ''
 
 # Application definition
 
@@ -45,6 +49,7 @@ INSTALLED_APPS = [
     'cart',
     'core',
     'product',
+    'order',
 ]
 
 MIDDLEWARE = [
